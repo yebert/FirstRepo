@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(Clock.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  font-family: "Courier New", Courier, monospace;
+
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "service main main"
+    "footer footer footer";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  color: linen;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(31, 39, 39);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: linen;
+  font-weight: 700;
+}
+
+header ul li a:hover {
+  color: lightgoldenrodyellow;
+}
+
+main {
+  border-radius: 10px;
+  grid-area: main;
+  background-color: rgb(31, 39, 39);
+  padding: 20px;
+  display: grid;
+}
+
+.service {
+  grid-area: service;
+  background-color: rgb(31, 39, 39);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+footer {
+  background-color: rgb(31, 39, 39);
+  border-radius: 10px;
+  padding: 20px;
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.gallery {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gallery-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.contactform {
+  min-width: 30%;
+  max-width: 50%;
+  margin-right: 2rem;
+}
+
+.information {
+  max-width: 50%;
+  min-width: 20%;
+  margin-left: 2rem;
+}
+
+fieldset {
+  border-color: linen;
+  padding: 10px;
+}
+
+.gallery-item:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.buttondiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+button {
+  background-color: linen;
+  padding: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: right;
+}
+
+button:active {
+  background-color: rgb(31, 39, 39);
+  color: linen;
+}
